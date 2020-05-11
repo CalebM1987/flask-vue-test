@@ -14,6 +14,9 @@ The user can also cheat and hit the number of cards in deck hyperlink to peek at
 
 If you don't like the order of the cards coming back, you can hit the `Shuffle Deck` Button to shuffle the remaining cards in the deck (not in your hand)
 
+# Running From Flask
+To actually run this application from flask, you'll need to run the [`run.py`](./run.py) script to start flask and then go to `http://localhost:5005/` in your browser (unless you changed the default port the app is running on)
+
 
 
 ## Project setup
