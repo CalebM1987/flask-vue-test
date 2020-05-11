@@ -16,8 +16,9 @@
     <b-row style="min-height: 50vh;">
       <b-col>
         <hr>
+          <h4 class="mt-3"><b>Your Hand</b></h4>
           <transition name="bounce-right" enter-active-class="animated bounceInLeft" leave-active-class="animated bounceOutRight" > 
-
+          
             <card-hand :hand="hand" v-if="hand.length">
               <template slot-scope="card">
                 <div class="mx-auto">
@@ -30,6 +31,7 @@
                 </div>
               </template>
             </card-hand>
+         
         </transition>
 
         <b-alert :show="state === 'idle' && !hand.length" class="my-auto" variant="warning">
