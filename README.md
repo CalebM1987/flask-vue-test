@@ -1,5 +1,5 @@
 # flask-vue-test
-Example Flask application using Vue.js instead of jinja templates for web app.  The Vue.js Application The application gets ran from Flask using a static directory.
+Example Flask application using Vue.js instead of jinja templates for web app.  The Vue.js Application gets ran from Flask using a static directory.
 
 ## About the app
  This is a simple application that just deals the user playing cards.  The card deck is stored in the backend in Flask to maintain deck state (so users can't just refresh the app to get a new deck of cards).
