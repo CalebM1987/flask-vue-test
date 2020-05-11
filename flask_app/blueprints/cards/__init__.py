@@ -21,7 +21,8 @@ class Dealer(object):
         shouldSetCookie = not playerId
         if not deck:
             deck, playerId = self.set_active_deck(playerId)
-        return deck, playerId, shouldSetCookie 
+            isNewDeck = True
+        return deck, playerId, shouldSetCookie
 
     def set_active_deck(self, playerId=None):
         if not playerId:
@@ -45,11 +46,11 @@ class Dealer(object):
 dealer = Dealer()
 
 @card_api.route('/api/cards/dealer/deal/<int:n>')
-def dummyData(n):
+def deal(n):
     deck, playerId, shouldSetCookie = dealer.get_active_deck()
     try:
         hand = deck.deal(n or 1)
-        resp = jsonify({ "isNewDeck": False, "hand": hand, "count": len(hand), "deckCount": len(deck) })
+        resp = jsonify({ "isNewDeck": not len(deck), "hand": hand, "count": len(hand), "deckCount": len(deck) })
     except:
         deck = dealer.deal_new_deck(playerId)
         hand = deck.deal(n or 1)

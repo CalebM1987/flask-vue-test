@@ -133,7 +133,7 @@
         this.hand = hand
 
         // alert user that the dealer has started a new deck
-        if (isNewDeck){
+        if (isNewDeck || count == 0){
           this.$bvToast.toast("You have gone through an entire deck, the dealer just grabbed another deck.  If you're feeling unlucky with cards you are getting, request the dealer to shuffle the deck by clicking on the \"Shuffle Deck\" button." , {
             title: 'New Deck Alert',
             variant: 'warning',
