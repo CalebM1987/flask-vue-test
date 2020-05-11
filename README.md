@@ -32,7 +32,7 @@ npm run serve
 ```
 
 - Note: you only need to run the `serve` command if you want to modify the local dev instance of the vue app.  This is **not** what get's ran from the flask instance (but will use the flask service to fetch cards).  If you make changes to the vue app, you must run the `build` command below to recompile the production app that will get placed in the `static` flask folder.
- - in the [vue.config.js](./vue.config.js) file, when the `NODE_ENV` is pointed to `production` (i.e. being ran from the flask app), the `publicPath` gets set to `./static/` to ensure the vue application is properly routed from the `static` folder of flask.
+ - in the [vue.config.js](./vue/vue.config.js) file, when the `NODE_ENV` is pointed to `production` (i.e. being ran from the flask app), the `publicPath` gets set to `./static/` to ensure the vue application is properly routed from the `static` folder of flask.
 
 ### Compiles and minifies for production
 ```
